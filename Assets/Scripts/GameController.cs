@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement; //シーン遷移させる場合に必要
 public class GameController : MonoBehaviour
 {
     public bool gameover=false;//ゲームオーバーならTrue
@@ -19,10 +20,11 @@ public class GameController : MonoBehaviour
     {
         if (gameover){
             gameoverPanel.SetActive(true); 
+            if (Input.GetKey (KeyCode.Space)) {
+                SceneManager.LoadScene("stage01");
+            }
         }
     }
 
-    void SetGameOver(){
-        
-    }
+    
 }
