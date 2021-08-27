@@ -27,7 +27,16 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         jumpcheck();//ジャンプフラグの更新
-        move();
+        //ゲームオーバー時などに動きを停止する
+        
+        if(!(gamemasterscript.gameover) && !(gamemasterscript.gameclear)){
+            move();
+        }else{//停止処理
+            rigidBody.velocity = Vector2.zero;
+            rigidBody.angularVelocity = 0;
+            rigidBody.isKinematic = true;
+        }
+        
         movecamera();
     }
 //*自機を動かす関数 */
@@ -70,6 +79,12 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.tag == "void"){
             Debug.Log("drop");
             gamemasterscript.gameover=true;
+            
+        }
+
+        if (other.gameObject.tag == "goal"){
+            Debug.Log("drop");
+            gamemasterscript.gameclear=true;
             
         }
         

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ground
   - void
+  - goal
   layers:
   - Default
   - TransparentFX
