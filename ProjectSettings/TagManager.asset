@@ -7,6 +7,9 @@ TagManager:
   - ground
   - parts
   - bomb
+  - void
+  - goal
+  - Enemy
   layers:
   - Default
   - TransparentFX
