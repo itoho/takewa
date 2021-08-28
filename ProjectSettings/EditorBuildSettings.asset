@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/stage_choice.unity
     guid: b973728f651592442b4f1d8d2f30d8cd
+  - enabled: 1
+    path: Assets/Scenes/Talking.unity
+    guid: 11c24daf5afb449d0ac53daf3009f90f
+  - enabled: 1
+    path: Assets/Scenes/HowToPlay.unity
+    guid: 29bdb9f4fbf2e46a39a50ce4891896c9
+  - enabled: 1
+    path: Assets/Scenes/TikuwaAction.unity
+    guid: 38971b76ce7bf428885a8e691d869e2a
   m_configObjects: {}
