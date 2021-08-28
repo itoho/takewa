@@ -83,8 +83,14 @@ public class PlayerController : MonoBehaviour
         }
 
         if (other.gameObject.tag == "goal"){
-            Debug.Log("drop");
+            Debug.Log("goal");
             gamemasterscript.gameclear=true;
+            
+        }
+
+        if (other.gameObject.tag == "Enemy"){
+            gamemasterscript.gameover=true;
+            Debug.Log("Death");
             
         }
         

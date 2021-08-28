@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour
 {
     public bool gameover=false;//ゲームオーバーならTrue
     public bool gameclear=false;//ゲームクリアならTrue
+    public int parts=0;
 
     public GameObject gameoverPanel;
 
@@ -24,15 +25,22 @@ public class GameController : MonoBehaviour
     {
         if (gameover){
             gameoverPanel.SetActive(true); 
-            if (Input.GetKey (KeyCode.Space)) {
-                SceneManager.LoadScene("stage01");
+            if (Input.GetKey (KeyCode.Space)||Input.GetKey (KeyCode.UpArrow)) {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
 
         if (gameclear){
             gameclearPanel.SetActive(true); 
-            if (Input.GetKey (KeyCode.Space)) {
+            if (Input.GetKey (KeyCode.Space)||Input.GetKey (KeyCode.UpArrow)) {
                 SceneManager.LoadScene("stage_choice");
+            }
+        }
+
+        if (Input.GetKey (KeyCode.Escape)) {//どうにもならなくなったとき
+            gameoverPanel.SetActive(true); 
+            if (Input.GetKey (KeyCode.Space)||Input.GetKey (KeyCode.UpArrow)) {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
 
