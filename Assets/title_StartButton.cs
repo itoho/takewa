@@ -22,6 +22,6 @@ public class title_StartButton : MonoBehaviour
 /* タップされたら音を鳴らし、ステージ選択シーンに移行する。この関数はタップされると呼び出される*/
     public void on_Click(){
         source.PlayOneShot(sound,4.0f);//シーン遷移でボタンごと消えるから意味ないけど一応残しといた
-        SceneManager.LoadScene("stage_choice");
+        SceneManager.LoadScene("MenuScene");
     }
 }
