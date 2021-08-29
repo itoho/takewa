@@ -39,9 +39,7 @@ public class GameController : MonoBehaviour
 
         if (Input.GetKey (KeyCode.Escape)) {//どうにもならなくなったとき
             gameoverPanel.SetActive(true); 
-            if (Input.GetKey (KeyCode.Space)||Input.GetKey (KeyCode.UpArrow)) {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            }
+            gameover=true;
         }
 
     }
