@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SelectButtonScript : MonoBehaviour
 {
@@ -59,7 +60,7 @@ public class SelectButtonScript : MonoBehaviour
         selectpanel.SetActive(false);     //ボタンが押されると選択パネルを非表示
     }
     public void ReturnMenu(){
-        // SceneManager.LoadScene(メニュー画面);
+        SceneManager.LoadScene("MenuScene");
     }
 
 }

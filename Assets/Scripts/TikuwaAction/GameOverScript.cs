@@ -25,6 +25,6 @@ public class GameOverScript : MonoBehaviour
         SceneManager.LoadScene("TikuwaAction");
     }
     public void Return(){
-        // SceneManager.LoadScene("ここにメインメニューのScene名をいれる");
+        SceneManager.LoadScene("MenuScene");
     }
 }

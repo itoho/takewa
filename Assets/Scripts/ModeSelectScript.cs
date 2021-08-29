@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class ButtonScript : MonoBehaviour
+public class ModeSelectScript : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -17,10 +17,13 @@ public class ButtonScript : MonoBehaviour
     {
         
     }
-    public void GameStart(){
-        SceneManager.LoadScene("TikuwaAction");
+    public void go_course(){
+        SceneManager.LoadScene("stage_choice");
     }
-    public void ReturnMenu(){
-        SceneManager.LoadScene("MenuScene");
+    public void go_scoreattack(){
+        SceneManager.LoadScene("HowToPlay");
     }
+    public void go_talking(){
+        SceneManager.LoadScene("Talking");
+    }    
 }
